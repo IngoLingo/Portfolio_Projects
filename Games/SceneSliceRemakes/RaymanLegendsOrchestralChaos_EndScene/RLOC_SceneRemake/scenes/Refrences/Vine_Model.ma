@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Vine_Model.ma
-//Last modified: Thu, Dec 24, 2020 08:14:18 AM
+//Last modified: Wed, Dec 30, 2020 12:07:53 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C8789B6B-41B7-E64C-5F5D-F8AB102455AD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.5775713391440584 45.378341684585394 95.215832679128539 ;
-	setAttr ".r" -type "double3" -23.13835272961575 1.400000000000035 0 ;
+	setAttr ".t" -type "double3" -60.276277506112351 1913.1764524489208 3614.4271818050274 ;
+	setAttr ".r" -type "double3" -27.938352729637632 -0.99999999999993738 -1.9881494807104282e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C0041D1B-4C22-7DCD-B475-1B8026269450";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 103.46134695169233;
+	setAttr ".coi" 4092.2856993271134;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -69,7 +69,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 40.634451803672384;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -78,7 +78,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Vine_RoughModel";
 	rename -uid "519391FE-4BF6-495F-64B9-8FAC20BEF2C3";
-	setAttr ".t" -type "double3" -7 0 -12 ;
+	setAttr ".t" -type "double3" 0 0 -24 ;
+	setAttr ".s" -type "double3" 20 20 20 ;
 createNode transform -n "pCylinder1" -p "Vine_RoughModel";
 	rename -uid "AF3D31F4-4273-AF4D-C23B-5BBB5E690085";
 	setAttr ".t" -type "double3" 0 1 0 ;
@@ -185,7 +186,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0C22E58A-4137-CAA2-F23E-089FEEFB9C72";
+	rename -uid "4AB697AF-4836-F4B1-EAF2-4BB263834542";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 select -ne :time1;
